@@ -1,0 +1,75 @@
+---
+title: "Raju Rishikesh Gollapally Business Analytics Assignment-1 "
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  word_document: default
+  pdf_document: default
+Date: "09-30-2023"
+---
+
+#Install the ISLR library operating the install.packages() command.
+    #install.packages("ISLR")
+    #As this ISLR package is already installed it will not reveal any error that the package is already installed.
+    
+
+#Calling the ISLR library using the library(ISLR) command to ensure that the library is correctly installed.
+
+```{r}
+library(ISLR)
+
+```
+
+#Considering the data set file Carseats that is present in the ISLR Library.
+
+```{r}
+View(Carseats)
+
+```
+
+#Printing the summary of the Carseats dataset
+
+```{r}
+summary(Carseats)
+
+```
+
+#Printing the  maximum value of the advertising attribute that is present in Carseats datset.
+
+```{r}
+max(Carseats$Advertising)
+
+```
+#Printing the  maximum value of the Price attribute that is present in Carseats datset.
+
+```{r}
+max(Carseats$Price)
+
+```
+
+#Summing up the Inter Quartile Range(Upper Range-Lower range) of the Price attribute
+
+```{r}
+IQR(Carseats$Price)
+
+```
+
+#Summing up the correlation between Sales VS Price
+#Conspiring the Sales against Price
+
+```{r}
+plot(Carseats$Sales,Carseats$Price,main = "Ploting the sales againest Price", xlab="sales", ylab = "Price")
+
+```
+#In This graph plot shows both the attributes Sales and Price in the y-axis and x-axis respectively. We can also see the pattern of the plots as to how the design is slant downwards.
+
+
+
+# Calculating the correlation of the two attributes(sales vS Price).
+
+```{r}
+cor.test(Carseats$Sales, Carseats$Price, method = c("pearson"))
+
+```
+#The result we obtained from the code is -0.4449507. The negative symbol indicates that the correlation coeffecient is weakly neagtive. The plot graph design also shows the same pattern.
